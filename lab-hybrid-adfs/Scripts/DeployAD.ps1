@@ -50,7 +50,9 @@ if (!(Test-Path -Path "$($completeFile)$step")) {
 
 $step=2
 if (!(Test-Path -Path "$($completeFile)$step")) {
-    $smPassword = (ConvertTo-SecureString $password -AsPlainText -Force)
+    $tempDSRMPassword = [guid]::NewGuid().guid
+    Write-Host "Temp DSRM Password is $tempDSRMPassword"
+    $smPassword = (ConvertTo-SecureString $tempDSRMPassword -AsPlainText -Force)
 
     #Install AD, reconfig network
     Install-WindowsFeature -Name "AD-Domain-Services" `

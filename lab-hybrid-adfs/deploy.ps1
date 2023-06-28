@@ -25,7 +25,7 @@ Import-Module Azure -ErrorAction SilentlyContinue
                                 @{ "FName"= "Mary"; "LName"= "Phillips"; "SAM"= "mphillips" },
                                 @{ "FName"= "Sue";  "LName"= "Jackson";  "SAM"= "sjackson" }
                                )
-    $defaultUserPassword     = "P@ssw0rd"
+    $defaultUserPassword     = "Whatta!P@ssw0rd"
 
     # ClientsToDeploy, array, possible values: "7","8","10-1607","10-1511","10-1703"
     # Examples: Single Win7 VM = @("7")
